@@ -19,7 +19,6 @@ res = {
         "userId": 1,
         "createdDate": "2021-02-19 05:50:04",
         "status": 0,
-        "quantity": 0,
         "sku": "SM-G981UBLU",
         "seller": "Xtrem"
     }
@@ -57,7 +56,6 @@ def post_data(data_list, min_price, competion, comp_price, time, url, prd):
             "userPrice": prd['price'],
             "competitionPrice": comp_price,
             "seller": data['merchant'],
-            "quantity": prd['quantity'],
             "scrapId": prd['productId'],
             "processing_time": data['time'] + time,
             "competionName": competion
