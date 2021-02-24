@@ -13,7 +13,7 @@ res = {
     "responseMessage": "get scraping data from rabbitmq successfully",
     "preferencePojo": {
         "productId": 16,
-        "product_scrap": "Google Pixel 3 XL (4g lte)",
+        "product_scrap": "Samsung Galaxy A50 US Version Factory Unlocked Cell Phone with 64GB Memory",
         "productURL": "https://www.amazon.com.au/",
         "price": 150,
         "userId": 1,
@@ -51,12 +51,10 @@ def post_data(data_list, min_price, competion, comp_price, time, url, prd):
         sub = {
             "siteUrl": url,
             "productName": data['name'],
-            "preferenceId": prd['userId'],
             "minPrice": min_price,
             "userPrice": prd['price'],
             "competitionPrice": comp_price,
             "seller": data['merchant'],
-            "scrapId": prd['productId'],
             "processing_time": data['time'] + time,
             "competionName": competion
         }
@@ -70,7 +68,7 @@ def post_data(data_list, min_price, competion, comp_price, time, url, prd):
                 print('Can\'t post data retrying in 3 seconds')
                 sleep(3)
         # For Manual
-        print(f"{sub['productName']}\n {sub['userPrice']}, {sub['minPrice']}, {sub['competitionPrice']}\n")
+        # print(f"{sub['productName']}\n {sub['userPrice']}, {sub['minPrice']}, {sub['competitionPrice']}\n")
 
     return response
 
