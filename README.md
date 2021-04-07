@@ -1,2 +1,1 @@
-# amazon
-https://www.amazon.com.au/ 
+# WS_23
